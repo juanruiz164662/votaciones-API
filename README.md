@@ -28,7 +28,7 @@ API RESTful hecha con **Python**, **FastAPI** y **PostgreSQL** para gestionar vo
 
 3. Crea un archivo `.env` en la raíz del proyecto con esta línea:
 
-   DATABASE_URL=postgresql://postgres:root@localhost:5432/votaciones
+   DATABASE_URL=postgresql://postgres:TU_CONTRASEÑA@localhost:5432/votaciones
 
 ## Ejecución
 
