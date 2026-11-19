@@ -15,29 +15,34 @@ API RESTful hecha con **Python**, **FastAPI** y **PostgreSQL** para gestionar vo
 - PostgreSQL, con una base de datos llamada `votaciones`
 
 ## Instalación
+
 1. Clona el repositorio:
-   
+
    git clone https://github.com/juanruiz164662/votaciones-api.git
    cd votaciones-api
-   
+
 
 2. Instala las dependencias:
 
    pip install -r requirements.txt
-   
+
 
 3. Crea un archivo `.env` en la raíz del proyecto con esta línea:
 
    DATABASE_URL=postgresql://postgres:TU_CONTRASEÑA@localhost:5432/votaciones
 
+
+   Reemplaza `TU_CONTRASEÑA` por la contraseña de tu usuario `postgres`.
+
 ## Ejecución
 
 python -m uvicorn app.main:app --reload
 
+
 - API: http://127.0.0.1:8000
 - Documentación interactiva (Swagger): http://127.0.0.1:8000/docs
-<<<<<<< HEAD
-=======
+
+Las tablas se crean automáticamente al arrancar la aplicación.
 
 ## Endpoints
 
@@ -89,6 +94,7 @@ json
 
 ### Registrar un candidato
 
+
 curl -X POST http://127.0.0.1:8000/candidates \
   -H "Content-Type: application/json" \
   -d '{"name": "Luis Gómez", "party": "Partido A", "email": "luis@correo.com"}'
@@ -106,6 +112,7 @@ json
 
 
 ### Emitir un voto
+
 
 curl -X POST http://127.0.0.1:8000/votes \
   -H "Content-Type: application/json" \
@@ -125,6 +132,7 @@ json
 Si el mismo votante intenta votar otra vez, la respuesta es `409 Conflict`.
 
 ### Consultar estadísticas
+
 
 curl http://127.0.0.1:8000/votes/statistics
 
@@ -154,6 +162,7 @@ json
 
 ## Estructura del proyecto
 
+
 votaciones-api/
 ├── app/
 │   ├── main.py
@@ -164,8 +173,5 @@ votaciones-api/
 │       ├── voters.py
 │       ├── candidates.py
 │       └── votes.py
-├── capturas/
-│   └── estadisticas.png
 ├── requirements.txt
 └── README.md
->>>>>>> 12c8ecc (Correcion en candidatos y votantes)
