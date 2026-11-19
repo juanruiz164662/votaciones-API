@@ -35,4 +35,4 @@ API RESTful hecha con **Python**, **FastAPI** y **PostgreSQL** para gestionar vo
 python -m uvicorn app.main:app --reload
 
 - API: http://127.0.0.1:8000
-- Documentación interactiva (Swagger): 
+- Documentación interactiva (Swagger): http://127.0.0.1:8000/docs
