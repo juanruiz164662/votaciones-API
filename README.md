@@ -142,12 +142,6 @@ json
 }
 
 
-## Capturas
-
-### Estadísticas de la votación
-
-![Estadísticas de la votación](capturas/estadisticas.png)
-
 ## Códigos de respuesta
 
 | Código | Cuándo ocurre |
