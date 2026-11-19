@@ -45,10 +45,11 @@ def eliminar_votante(voter_id: int, db: Session = Depends(get_db)):
     voto = db.query(Vote).filter(Vote.voter_id == voter_id).first()
     if voto:
         candidato = db.get(Candidate, voto.candidate_id)
-        if candidato and candidato.voto > 0:
+        if candidato and candidato.votes > 0:
             candidato.votes -= 1
         db.delete(voto)
         
+    db.flush()  
     db.delete(votante)
     db.commit()
     return None

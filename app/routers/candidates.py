@@ -47,7 +47,8 @@ def eliminar_candidato(candidate_id: int, db: Session = Depends(get_db)):
         if votante:
             votante.has_voted = False
         db.delete(voto)
-        
+    
+    db.flush()        
     db.delete(candidato)
     db.commit()
     return None
